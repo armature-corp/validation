@@ -16,8 +16,6 @@ export class Validation {
    * @param validationConfig the configuration
    */
   constructor(observerLocator, validationConfig: ValidationConfig) {
-    console.warn('[ARMATURE][DEPRECATION WARNING] Update Validation');
-
     this.observerLocator = observerLocator;
     this.config = validationConfig ? validationConfig : Validation.defaults;
   }

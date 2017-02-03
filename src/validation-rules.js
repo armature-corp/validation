@@ -45,6 +45,8 @@ export class ValidationRule {
    * Validation rules: return a promise that fulfills and resolves to true/false
    */
   validate(currentValue, locale): Promise<any> {
+    console.warn('[ARMATURE][DEPRECATION WARNING] Validation initialized with old validation logic');
+
     if (locale === undefined) {
       locale = ValidationLocale.Repository.default;
     }
