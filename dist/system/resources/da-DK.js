@@ -1,6 +1,8 @@
 'use strict';
 
 System.register(['../utilities'], function (_export, _context) {
+  "use strict";
+
   var Utilities, data;
   return {
     setters: [function (_utilities) {
@@ -27,13 +29,13 @@ System.register(['../utilities'], function (_export, _context) {
             return 'kan kun indeholde bogstaver og mellemrum';
           },
           'BetweenLengthValidationRule': function BetweenLengthValidationRule(newValue, threshold) {
-            return 'skal være imellem ' + Utilities.getValue(threshold.minimumLength) + ' og ' + Utilities.getValue(threshold.maximumLength) + ' tegn lang';
+            return 'skal v\xE6re imellem ' + Utilities.getValue(threshold.minimumLength) + ' og ' + Utilities.getValue(threshold.maximumLength) + ' tegn lang';
           },
           'BetweenValueValidationRule': function BetweenValueValidationRule(newValue, threshold) {
-            return 'skal være imellem ' + Utilities.getValue(threshold.minimumValue) + ' og ' + Utilities.getValue(threshold.maximumValue);
+            return 'skal v\xE6re imellem ' + Utilities.getValue(threshold.minimumValue) + ' og ' + Utilities.getValue(threshold.maximumValue);
           },
           'CustomFunctionValidationRule': function CustomFunctionValidationRule(newValue, threshold) {
-            return 'ikke en gyldig værdi';
+            return 'ikke en gyldig v\xE6rdi';
           },
           'DigitValidationRule': function DigitValidationRule(newValue, threshold) {
             return 'kan kun indeholde tal';
@@ -42,55 +44,55 @@ System.register(['../utilities'], function (_export, _context) {
             return 'ikke gyldig e-mailadresse';
           },
           'EqualityValidationRule': function EqualityValidationRule(newValue, threshold) {
-            return 'burde være ' + Utilities.getValue(threshold.otherValue);
+            return 'burde v\xE6re ' + Utilities.getValue(threshold.otherValue);
           },
           'InEqualityValidationRule': function InEqualityValidationRule(newValue, threshold) {
-            return 'kan ikke være ' + Utilities.getValue(threshold.otherValue);
+            return 'kan ikke v\xE6re ' + Utilities.getValue(threshold.otherValue);
           },
           'EqualityWithOtherLabelValidationRule': function EqualityWithOtherLabelValidationRule(newValue, threshold) {
             return 'er ikke ens ' + Utilities.getValue(threshold.otherValueLabel);
           },
           'InEqualityWithOtherLabelValidationRule': function InEqualityWithOtherLabelValidationRule(newValue, threshold) {
-            return 'kan ikke være ens ' + Utilities.getValue(threshold.otherValueLabel);
+            return 'kan ikke v\xE6re ens ' + Utilities.getValue(threshold.otherValueLabel);
           },
           'InCollectionValidationRule': function InCollectionValidationRule(newValue, threshold) {
-            return 'ikke en gyldig værdi';
+            return 'ikke en gyldig v\xE6rdi';
           },
           'MinimumInclusiveValueValidationRule': function MinimumInclusiveValueValidationRule(newValue, threshold) {
-            return 'skal være ' + Utilities.getValue(threshold) + ' eller højere';
+            return 'skal v\xE6re ' + Utilities.getValue(threshold) + ' eller h\xF8jere';
           },
           'MinimumLengthValidationRule': function MinimumLengthValidationRule(newValue, threshold) {
-            return 'skal være mindst ' + Utilities.getValue(threshold) + ' tegn lang';
+            return 'skal v\xE6re mindst ' + Utilities.getValue(threshold) + ' tegn lang';
           },
           'MinimumValueValidationRule': function MinimumValueValidationRule(newValue, threshold) {
-            return 'skal være større end ' + Utilities.getValue(threshold);
+            return 'skal v\xE6re st\xF8rre end ' + Utilities.getValue(threshold);
           },
           'MaximumInclusiveValueValidationRule': function MaximumInclusiveValueValidationRule(newValue, threshold) {
-            return 'skal være ' + Utilities.getValue(threshold) + ' eller mindre';
+            return 'skal v\xE6re ' + Utilities.getValue(threshold) + ' eller mindre';
           },
           'MaximumLengthValidationRule': function MaximumLengthValidationRule(newValue, threshold) {
-            return 'kan ikke være længere end ' + Utilities.getValue(threshold) + ' tegn';
+            return 'kan ikke v\xE6re l\xE6ngere end ' + Utilities.getValue(threshold) + ' tegn';
           },
           'MaximumValueValidationRule': function MaximumValueValidationRule(newValue, threshold) {
-            return 'skal være mindre end ' + Utilities.getValue(threshold);
+            return 'skal v\xE6re mindre end ' + Utilities.getValue(threshold);
           },
           'NumericValidationRule': function NumericValidationRule(newValue, threshold) {
-            return 'skal være en talværdi';
+            return 'skal v\xE6re en talv\xE6rdi';
           },
           'NoSpacesValidationRule': function NoSpacesValidationRule(newValue, threshold) {
-            return 'må ikke indeholde mellemrum';
+            return 'm\xE5 ikke indeholde mellemrum';
           },
           'RegexValidationRule': function RegexValidationRule(newValue, threshold) {
-            return 'ikke en gyldig værdi';
+            return 'ikke en gyldig v\xE6rdi';
           },
           'ContainsOnlyValidationRule': function ContainsOnlyValidationRule(newValue, threshold) {
-            return 'ikke en gyldig værdi';
+            return 'ikke en gyldig v\xE6rdi';
           },
           'StrongPasswordValidationRule': function StrongPasswordValidationRule(newValue, threshold) {
-            return 'skal være en kombination af små bogstaver, store bogstaver, tal og specialtegn';
+            return 'skal v\xE6re en kombination af sm\xE5 bogstaver, store bogstaver, tal og specialtegn';
           },
           'MediumPasswordValidationRule': function MediumPasswordValidationRule(newValue, threshold) {
-            return 'skal indeholde mindst ' + Utilities.getValue(threshold) + ' af de følgende grupper: små bogstaver, store bogstaver, tal og specialtegn';
+            return 'skal indeholde mindst ' + Utilities.getValue(threshold) + ' af de f\xF8lgende grupper: sm\xE5 bogstaver, store bogstaver, tal og specialtegn';
           },
           'URLValidationRule': function URLValidationRule(newValue, threshold) {
             return 'ikke en gyldig URL';

@@ -20,10 +20,10 @@ export let data = {
       return `трябва да съдържа само букви или интервали`;
     },
     'BetweenLengthValidationRule': (newValue, threshold) => {
-      return `броят на символите трябва да бъде между ${ Utilities.getValue(threshold.minimumLength) } и ${ Utilities.getValue(threshold.maximumLength) }`;
+      return `броят на символите трябва да бъде между ${Utilities.getValue(threshold.minimumLength)} и ${Utilities.getValue(threshold.maximumLength)}`;
     },
     'BetweenValueValidationRule': (newValue, threshold) => {
-      return `стойността трябва да бъде между ${ Utilities.getValue(threshold.minimumValue) } и ${ Utilities.getValue(threshold.maximumValue) }`;
+      return `стойността трябва да бъде между ${Utilities.getValue(threshold.minimumValue)} и ${Utilities.getValue(threshold.maximumValue)}`;
     },
     'CustomFunctionValidationRule': (newValue, threshold) => {
       return `невалидна стойност`;
@@ -35,37 +35,37 @@ export let data = {
       return `невалидна електронна поща`;
     },
     'EqualityValidationRule': (newValue, threshold) => {
-      return `стойността трябва да бъде ${ Utilities.getValue(threshold.otherValue) }`;
+      return `стойността трябва да бъде ${Utilities.getValue(threshold.otherValue)}`;
     },
     'InEqualityValidationRule': (newValue, threshold) => {
-      return `стойността не може да бъде ${ Utilities.getValue(threshold.otherValue) }`;
+      return `стойността не може да бъде ${Utilities.getValue(threshold.otherValue)}`;
     },
     'EqualityWithOtherLabelValidationRule': (newValue, threshold) => {
-      return `стойността не съвпада с ${ Utilities.getValue(threshold.otherValueLabel) }`;
+      return `стойността не съвпада с ${Utilities.getValue(threshold.otherValueLabel)}`;
     },
     'InEqualityWithOtherLabelValidationRule': (newValue, threshold) => {
-      return `стойността не може да съвпада с ${ Utilities.getValue(threshold.otherValueLabel) }`;
+      return `стойността не може да съвпада с ${Utilities.getValue(threshold.otherValueLabel)}`;
     },
     'InCollectionValidationRule': (newValue, threshold) => {
       return `невалидна стойност`;
     },
     'MinimumInclusiveValueValidationRule': (newValue, threshold) => {
-      return `стойността трябва да бъде ${ Utilities.getValue(threshold) } или повече`;
+      return `стойността трябва да бъде ${Utilities.getValue(threshold)} или повече`;
     },
     'MinimumLengthValidationRule': (newValue, threshold) => {
-      return `броят на символите трябва да бъде поне ${ Utilities.getValue(threshold) }`;
+      return `броят на символите трябва да бъде поне ${Utilities.getValue(threshold)}`;
     },
     'MinimumValueValidationRule': (newValue, threshold) => {
-      return `стойността трябва да бъде повече от ${ Utilities.getValue(threshold) }`;
+      return `стойността трябва да бъде повече от ${Utilities.getValue(threshold)}`;
     },
     'MaximumInclusiveValueValidationRule': (newValue, threshold) => {
-      return `стойността трябва да бъде ${ Utilities.getValue(threshold) } или по-малко`;
+      return `стойността трябва да бъде ${Utilities.getValue(threshold)} или по-малко`;
     },
     'MaximumLengthValidationRule': (newValue, threshold) => {
-      return `броят на символите не може да бъде повече от ${ Utilities.getValue(threshold) }`;
+      return `броят на символите не може да бъде повече от ${Utilities.getValue(threshold)}`;
     },
     'MaximumValueValidationRule': (newValue, threshold) => {
-      return `стойността трябва да бъде по-малко от ${ Utilities.getValue(threshold) }`;
+      return `стойността трябва да бъде по-малко от ${Utilities.getValue(threshold)}`;
     },
     'NumericValidationRule': (newValue, threshold) => {
       return `стойността на полето трябва да бъде число`;
@@ -80,7 +80,7 @@ export let data = {
       return `трябва да съдържа комбинация от малки и големи букви, цифри и специални знаци`;
     },
     'MediumPasswordValidationRule': (newValue, threshold) => {
-      return `трябва да съдържа поне  ${ Utilities.getValue(threshold) } от следните групи: малки и големи букви, цифри и специални знаци`;
+      return `трябва да съдържа поне  ${Utilities.getValue(threshold)} от следните групи: малки и големи букви, цифри и специални знаци`;
     }
   }
 };

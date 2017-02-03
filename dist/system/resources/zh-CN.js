@@ -1,6 +1,8 @@
 'use strict';
 
 System.register(['../utilities'], function (_export, _context) {
+  "use strict";
+
   var Utilities, data;
   return {
     setters: [function (_utilities) {
@@ -15,85 +17,85 @@ System.register(['../utilities'], function (_export, _context) {
           'isRequired': '必填字段',
           'onValidateCallback': '非法字段',
           'AlphaNumericOrWhitespaceValidationRule': function AlphaNumericOrWhitespaceValidationRule(newValue, threshold) {
-            return '不能使用特殊字符';
+            return '\u4E0D\u80FD\u4F7F\u7528\u7279\u6B8A\u5B57\u7B26';
           },
           'AlphaNumericValidationRule': function AlphaNumericValidationRule(newValue, threshold) {
-            return '只能包含字母数字字符';
+            return '\u53EA\u80FD\u5305\u542B\u5B57\u6BCD\u6570\u5B57\u5B57\u7B26';
           },
           'AlphaValidationRule': function AlphaValidationRule(newValue, threshold) {
-            return '只能包含字母';
+            return '\u53EA\u80FD\u5305\u542B\u5B57\u6BCD';
           },
           'AlphaOrWhitespaceValidationRule': function AlphaOrWhitespaceValidationRule(newValue, threshold) {
-            return '只能包含字母或空格';
+            return '\u53EA\u80FD\u5305\u542B\u5B57\u6BCD\u6216\u7A7A\u683C';
           },
           'BetweenLengthValidationRule': function BetweenLengthValidationRule(newValue, threshold) {
-            return '字符长度应该在 ' + Utilities.getValue(threshold.minimumLength) + ' ~ ' + Utilities.getValue(threshold.maximumLength) + ' 之间';
+            return '\u5B57\u7B26\u957F\u5EA6\u5E94\u8BE5\u5728 ' + Utilities.getValue(threshold.minimumLength) + ' ~ ' + Utilities.getValue(threshold.maximumLength) + ' \u4E4B\u95F4';
           },
           'BetweenValueValidationRule': function BetweenValueValidationRule(newValue, threshold) {
-            return '字符长度应该在 ' + Utilities.getValue(threshold.minimumValue) + ' ~ ' + Utilities.getValue(threshold.maximumValue) + ' 之间';
+            return '\u5B57\u7B26\u957F\u5EA6\u5E94\u8BE5\u5728 ' + Utilities.getValue(threshold.minimumValue) + ' ~ ' + Utilities.getValue(threshold.maximumValue) + ' \u4E4B\u95F4';
           },
           'CustomFunctionValidationRule': function CustomFunctionValidationRule(newValue, threshold) {
-            return '不合法的值';
+            return '\u4E0D\u5408\u6CD5\u7684\u503C';
           },
           'DigitValidationRule': function DigitValidationRule(newValue, threshold) {
-            return '只能包含数字';
+            return '\u53EA\u80FD\u5305\u542B\u6570\u5B57';
           },
           'EmailValidationRule': function EmailValidationRule(newValue, threshold) {
-            return '邮箱格式不正确';
+            return '\u90AE\u7BB1\u683C\u5F0F\u4E0D\u6B63\u786E';
           },
           'EqualityValidationRule': function EqualityValidationRule(newValue, threshold) {
-            return '应该等于 ' + Utilities.getValue(threshold.otherValue);
+            return '\u5E94\u8BE5\u7B49\u4E8E ' + Utilities.getValue(threshold.otherValue);
           },
           'InEqualityValidationRule': function InEqualityValidationRule(newValue, threshold) {
-            return '不应该等于 ' + Utilities.getValue(threshold.otherValue);
+            return '\u4E0D\u5E94\u8BE5\u7B49\u4E8E ' + Utilities.getValue(threshold.otherValue);
           },
           'EqualityWithOtherLabelValidationRule': function EqualityWithOtherLabelValidationRule(newValue, threshold) {
-            return '与 ' + Utilities.getValue(threshold.otherValueLabel) + ' 不匹配';
+            return '\u4E0E ' + Utilities.getValue(threshold.otherValueLabel) + ' \u4E0D\u5339\u914D';
           },
           'InEqualityWithOtherLabelValidationRule': function InEqualityWithOtherLabelValidationRule(newValue, threshold) {
-            return '不应该和 ' + Utilities.getValue(threshold.otherValueLabel) + ' 相等';
+            return '\u4E0D\u5E94\u8BE5\u548C ' + Utilities.getValue(threshold.otherValueLabel) + ' \u76F8\u7B49';
           },
           'InCollectionValidationRule': function InCollectionValidationRule(newValue, threshold) {
-            return '不合法的值';
+            return '\u4E0D\u5408\u6CD5\u7684\u503C';
           },
           'MinimumInclusiveValueValidationRule': function MinimumInclusiveValueValidationRule(newValue, threshold) {
-            return '最小值为 ' + Utilities.getValue(threshold) + ' (包含)';
+            return '\u6700\u5C0F\u503C\u4E3A ' + Utilities.getValue(threshold) + ' (\u5305\u542B)';
           },
           'MinimumLengthValidationRule': function MinimumLengthValidationRule(newValue, threshold) {
-            return '最小字符长度为 ' + Utilities.getValue(threshold);
+            return '\u6700\u5C0F\u5B57\u7B26\u957F\u5EA6\u4E3A ' + Utilities.getValue(threshold);
           },
           'MinimumValueValidationRule': function MinimumValueValidationRule(newValue, threshold) {
-            return '最小值为 ' + Utilities.getValue(threshold) + '(不包含)';
+            return '\u6700\u5C0F\u503C\u4E3A ' + Utilities.getValue(threshold) + '(\u4E0D\u5305\u542B)';
           },
           'MaximumInclusiveValueValidationRule': function MaximumInclusiveValueValidationRule(newValue, threshold) {
-            return '最大值为 ' + Utilities.getValue(threshold) + ' (包含)';
+            return '\u6700\u5927\u503C\u4E3A ' + Utilities.getValue(threshold) + ' (\u5305\u542B)';
           },
           'MaximumLengthValidationRule': function MaximumLengthValidationRule(newValue, threshold) {
-            return '最大字符长度为 ' + Utilities.getValue(threshold);
+            return '\u6700\u5927\u5B57\u7B26\u957F\u5EA6\u4E3A ' + Utilities.getValue(threshold);
           },
           'MaximumValueValidationRule': function MaximumValueValidationRule(newValue, threshold) {
-            return '最大值为 ' + Utilities.getValue(threshold) + '(不包含)';
+            return '\u6700\u5927\u503C\u4E3A ' + Utilities.getValue(threshold) + '(\u4E0D\u5305\u542B)';
           },
           'NumericValidationRule': function NumericValidationRule(newValue, threshold) {
-            return '请输入一个数字';
+            return '\u8BF7\u8F93\u5165\u4E00\u4E2A\u6570\u5B57';
           },
           'NoSpacesValidationRule': function NoSpacesValidationRule(newValue, threshold) {
-            return '不能包含空字符';
+            return '\u4E0D\u80FD\u5305\u542B\u7A7A\u5B57\u7B26';
           },
           'RegexValidationRule': function RegexValidationRule(newValue, threshold) {
-            return '不合法的值';
+            return '\u4E0D\u5408\u6CD5\u7684\u503C';
           },
           'ContainsOnlyValidationRule': function ContainsOnlyValidationRule(newValue, threshold) {
-            return '不合法的值';
+            return '\u4E0D\u5408\u6CD5\u7684\u503C';
           },
           'StrongPasswordValidationRule': function StrongPasswordValidationRule(newValue, threshold) {
-            return '应包含大小字母，数字和特殊字符';
+            return '\u5E94\u5305\u542B\u5927\u5C0F\u5B57\u6BCD\uFF0C\u6570\u5B57\u548C\u7279\u6B8A\u5B57\u7B26';
           },
           'MediumPasswordValidationRule': function MediumPasswordValidationRule(newValue, threshold) {
-            return '至少包含 ' + Utilities.getValue(threshold) + ' 种以下组合:小写字母,大写字母,数字和特殊字符';
+            return '\u81F3\u5C11\u5305\u542B ' + Utilities.getValue(threshold) + ' \u79CD\u4EE5\u4E0B\u7EC4\u5408:\u5C0F\u5199\u5B57\u6BCD,\u5927\u5199\u5B57\u6BCD,\u6570\u5B57\u548C\u7279\u6B8A\u5B57\u7B26';
           },
           'URLValidationRule': function URLValidationRule(newValue, threshold) {
-            return 'URL格式不正确';
+            return 'URL\u683C\u5F0F\u4E0D\u6B63\u786E';
           }
         }
       });

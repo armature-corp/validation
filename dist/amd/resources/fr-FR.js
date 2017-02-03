@@ -13,10 +13,10 @@ define(['exports', '../utilities'], function (exports, _utilities) {
       'isRequired': 'est obligatoire',
       'onValidateCallback': 'n\'est pas une valeur valide',
       'AlphaNumericOrWhitespaceValidationRule': function AlphaNumericOrWhitespaceValidationRule(newValue, threshold) {
-        return 'ne peut contenir que des caractères alphanumériques ou des espaces';
+        return 'ne peut contenir que des caract\xE8res alphanum\xE9riques ou des espaces';
       },
       'AlphaNumericValidationRule': function AlphaNumericValidationRule(newValue, threshold) {
-        return 'ne peut contenir que des caractères alphanumériques';
+        return 'ne peut contenir que des caract\xE8res alphanum\xE9riques';
       },
       'AlphaValidationRule': function AlphaValidationRule(newValue, threshold) {
         return 'ne peut contenir que des lettres';
@@ -25,55 +25,55 @@ define(['exports', '../utilities'], function (exports, _utilities) {
         return 'ne peut contenir que des lettres ou des espaces';
       },
       'BetweenLengthValidationRule': function BetweenLengthValidationRule(newValue, threshold) {
-        return 'doit contenir de ' + _utilities.Utilities.getValue(threshold.minimumLength) + ' à ' + _utilities.Utilities.getValue(threshold.maximumLength) + ' caractères';
+        return 'doit contenir de ' + _utilities.Utilities.getValue(threshold.minimumLength) + ' \xE0 ' + _utilities.Utilities.getValue(threshold.maximumLength) + ' caract\xE8res';
       },
       'BetweenValueValidationRule': function BetweenValueValidationRule(newValue, threshold) {
-        return 'doit être entre ' + _utilities.Utilities.getValue(threshold.minimumValue) + ' et ' + _utilities.Utilities.getValue(threshold.maximumValue);
+        return 'doit \xEAtre entre ' + _utilities.Utilities.getValue(threshold.minimumValue) + ' et ' + _utilities.Utilities.getValue(threshold.maximumValue);
       },
       'CustomFunctionValidationRule': function CustomFunctionValidationRule(newValue, threshold) {
         return 'n\'est pas une valeur valide';
       },
       'DigitValidationRule': function DigitValidationRule(newValue, threshold) {
-        return 'doit contenir uniquement des caractères numériques';
+        return 'doit contenir uniquement des caract\xE8res num\xE9riques';
       },
       'EmailValidationRule': function EmailValidationRule(newValue, threshold) {
         return 'n\'est pas une adresse email valide';
       },
       'EqualityValidationRule': function EqualityValidationRule(newValue, threshold) {
-        return 'doit être ' + _utilities.Utilities.getValue(threshold.otherValue);
+        return 'doit \xEAtre ' + _utilities.Utilities.getValue(threshold.otherValue);
       },
       'InEqualityValidationRule': function InEqualityValidationRule(newValue, threshold) {
-        return 'ne peut pas être ' + _utilities.Utilities.getValue(threshold.otherValue);
+        return 'ne peut pas \xEAtre ' + _utilities.Utilities.getValue(threshold.otherValue);
       },
       'EqualityWithOtherLabelValidationRule': function EqualityWithOtherLabelValidationRule(newValue, threshold) {
-        return 'doit correspondre à ' + _utilities.Utilities.getValue(threshold.otherValueLabel);
+        return 'doit correspondre \xE0 ' + _utilities.Utilities.getValue(threshold.otherValueLabel);
       },
       'InEqualityWithOtherLabelValidationRule': function InEqualityWithOtherLabelValidationRule(newValue, threshold) {
-        return 'ne doit pas correspondre à ' + _utilities.Utilities.getValue(threshold.otherValueLabel);
+        return 'ne doit pas correspondre \xE0 ' + _utilities.Utilities.getValue(threshold.otherValueLabel);
       },
       'InCollectionValidationRule': function InCollectionValidationRule(newValue, threshold) {
         return 'n\'est pas une valeur valide';
       },
       'MinimumInclusiveValueValidationRule': function MinimumInclusiveValueValidationRule(newValue, threshold) {
-        return 'doit être ' + _utilities.Utilities.getValue(threshold) + ' ou plus';
+        return 'doit \xEAtre ' + _utilities.Utilities.getValue(threshold) + ' ou plus';
       },
       'MinimumLengthValidationRule': function MinimumLengthValidationRule(newValue, threshold) {
-        return 'doit contenir au moins ' + _utilities.Utilities.getValue(threshold) + ' caractères';
+        return 'doit contenir au moins ' + _utilities.Utilities.getValue(threshold) + ' caract\xE8res';
       },
       'MinimumValueValidationRule': function MinimumValueValidationRule(newValue, threshold) {
-        return 'doit être plus que ' + _utilities.Utilities.getValue(threshold);
+        return 'doit \xEAtre plus que ' + _utilities.Utilities.getValue(threshold);
       },
       'MaximumInclusiveValueValidationRule': function MaximumInclusiveValueValidationRule(newValue, threshold) {
-        return 'doit être moins que ' + _utilities.Utilities.getValue(threshold);
+        return 'doit \xEAtre moins que ' + _utilities.Utilities.getValue(threshold);
       },
       'MaximumLengthValidationRule': function MaximumLengthValidationRule(newValue, threshold) {
-        return 'ne doit pas contenir plus de ' + _utilities.Utilities.getValue(threshold) + ' caractères';
+        return 'ne doit pas contenir plus de ' + _utilities.Utilities.getValue(threshold) + ' caract\xE8res';
       },
       'MaximumValueValidationRule': function MaximumValueValidationRule(newValue, threshold) {
-        return 'doit être ' + _utilities.Utilities.getValue(threshold) + ' ou moins';
+        return 'doit \xEAtre ' + _utilities.Utilities.getValue(threshold) + ' ou moins';
       },
       'NumericValidationRule': function NumericValidationRule(newValue, threshold) {
-        return 'doit être une valeur numérique';
+        return 'doit \xEAtre une valeur num\xE9rique';
       },
       'NoSpacesValidationRule': function NoSpacesValidationRule(newValue, threshold) {
         return 'ne peut pas contenir d\'espaces';
@@ -85,10 +85,10 @@ define(['exports', '../utilities'], function (exports, _utilities) {
         return 'n\'est pas une valeur valide';
       },
       'StrongPasswordValidationRule': function StrongPasswordValidationRule(newValue, threshold) {
-        return 'doit contenir une combinaison de lettres minuscules, de lettres majuscules, de caractères numériques et de caractères spéciaux';
+        return 'doit contenir une combinaison de lettres minuscules, de lettres majuscules, de caract\xE8res num\xE9riques et de caract\xE8res sp\xE9ciaux';
       },
       'MediumPasswordValidationRule': function MediumPasswordValidationRule(newValue, threshold) {
-        return 'doit contenir au moins ' + _utilities.Utilities.getValue(threshold) + ' des caractéristiques suivantes : lettres minuscules, lettres majuscules, caractères numériques ou caractères spéciaux';
+        return 'doit contenir au moins ' + _utilities.Utilities.getValue(threshold) + ' des caract\xE9ristiques suivantes : lettres minuscules, lettres majuscules, caract\xE8res num\xE9riques ou caract\xE8res sp\xE9ciaux';
       },
       'URLValidationRule': function URLValidationRule(newValue, threshold) {
         return 'est pas un URL valide';

@@ -1,6 +1,8 @@
 'use strict';
 
 System.register(['aurelia-binding', './validation-group', 'aurelia-dependency-injection', './validation-config'], function (_export, _context) {
+  "use strict";
+
   var ObserverLocator, ValidationGroup, inject, ValidationConfig, _dec, _class, Validation;
 
   function _classCallCheck(instance, Constructor) {
@@ -23,6 +25,8 @@ System.register(['aurelia-binding', './validation-group', 'aurelia-dependency-in
       _export('Validation', Validation = (_dec = inject(ObserverLocator), _dec(_class = function () {
         function Validation(observerLocator, validationConfig) {
           _classCallCheck(this, Validation);
+
+          console.warn('[ARMATURE][DEPRECATION WARNING] Update Validation');
 
           this.observerLocator = observerLocator;
           this.config = validationConfig ? validationConfig : Validation.defaults;

@@ -20,10 +20,10 @@ export let data = {
       return `半角アルファベットまたは半角スペースのみ入力可能です。`;
     },
     'BetweenLengthValidationRule': (newValue, threshold) => {
-      return `${ Utilities.getValue(threshold.minimumLength) }文字以上${ Utilities.getValue(threshold.maximumLength) }文字以内で入力してください。`;
+      return `${Utilities.getValue(threshold.minimumLength)}文字以上${Utilities.getValue(threshold.maximumLength)}文字以内で入力してください。`;
     },
     'BetweenValueValidationRule': (newValue, threshold) => {
-      return `${ Utilities.getValue(threshold.minimumValue) }以上${ Utilities.getValue(threshold.maximumValue) }以内で入力してください。`;
+      return `${Utilities.getValue(threshold.minimumValue)}以上${Utilities.getValue(threshold.maximumValue)}以内で入力してください。`;
     },
     'CustomFunctionValidationRule': (newValue, threshold) => {
       return `無効な入力値です。`;
@@ -35,37 +35,37 @@ export let data = {
       return `無効なメールアドレスです。`;
     },
     'EqualityValidationRule': (newValue, threshold) => {
-      return `${ Utilities.getValue(threshold.otherValue) }である必要があります。`;
+      return `${Utilities.getValue(threshold.otherValue)}である必要があります。`;
     },
     'InEqualityValidationRule': (newValue, threshold) => {
-      return `${ Utilities.getValue(threshold.otherValue) }は指定できません。`;
+      return `${Utilities.getValue(threshold.otherValue)}は指定できません。`;
     },
     'EqualityWithOtherLabelValidationRule': (newValue, threshold) => {
-      return `${ Utilities.getValue(threshold.otherValueLabel) }と一致しません。`;
+      return `${Utilities.getValue(threshold.otherValueLabel)}と一致しません。`;
     },
     'InEqualityWithOtherLabelValidationRule': (newValue, threshold) => {
-      return `${ Utilities.getValue(threshold.otherValueLabel) }と同じ値は指定できません。`;
+      return `${Utilities.getValue(threshold.otherValueLabel)}と同じ値は指定できません。`;
     },
     'InCollectionValidationRule': (newValue, threshold) => {
       return `無効な入力値です。`;
     },
     'MinimumInclusiveValueValidationRule': (newValue, threshold) => {
-      return `${ Utilities.getValue(threshold) }以上である必要があります。`;
+      return `${Utilities.getValue(threshold)}以上である必要があります。`;
     },
     'MinimumLengthValidationRule': (newValue, threshold) => {
-      return `${ Utilities.getValue(threshold) }文字以上入力してください。`;
+      return `${Utilities.getValue(threshold)}文字以上入力してください。`;
     },
     'MinimumValueValidationRule': (newValue, threshold) => {
-      return `${ Utilities.getValue(threshold) }より大きな値を指定してください。`;
+      return `${Utilities.getValue(threshold)}より大きな値を指定してください。`;
     },
     'MaximumInclusiveValueValidationRule': (newValue, threshold) => {
-      return `${ Utilities.getValue(threshold) }以下である必要があります。`;
+      return `${Utilities.getValue(threshold)}以下である必要があります。`;
     },
     'MaximumLengthValidationRule': (newValue, threshold) => {
-      return `${ Utilities.getValue(threshold) }文字以下で入力してください。`;
+      return `${Utilities.getValue(threshold)}文字以下で入力してください。`;
     },
     'MaximumValueValidationRule': (newValue, threshold) => {
-      return `${ Utilities.getValue(threshold) }より小さい値を指定してください。`;
+      return `${Utilities.getValue(threshold)}より小さい値を指定してください。`;
     },
     'NumericValidationRule': (newValue, threshold) => {
       return `数値を入力してください。`;
@@ -83,7 +83,7 @@ export let data = {
       return `小文字、大文字、数字、および記号をそれぞれ含める必要があります。`;
     },
     'MediumPasswordValidationRule': (newValue, threshold) => {
-      return `小文字、大文字、数字、記号のうち${ Utilities.getValue(threshold) }種類の文字を含める必要があります。`;
+      return `小文字、大文字、数字、記号のうち${Utilities.getValue(threshold)}種類の文字を含める必要があります。`;
     },
     'URLValidationRule': (newValue, threshold) => {
       return `無効なURLです。`;

@@ -20,10 +20,10 @@ export let data = {
       return `kan kun indeholde bogstaver og mellemrum`;
     },
     'BetweenLengthValidationRule': (newValue, threshold) => {
-      return `skal være imellem ${ Utilities.getValue(threshold.minimumLength) } og ${ Utilities.getValue(threshold.maximumLength) } tegn lang`;
+      return `skal være imellem ${Utilities.getValue(threshold.minimumLength)} og ${Utilities.getValue(threshold.maximumLength)} tegn lang`;
     },
     'BetweenValueValidationRule': (newValue, threshold) => {
-      return `skal være imellem ${ Utilities.getValue(threshold.minimumValue) } og ${ Utilities.getValue(threshold.maximumValue) }`;
+      return `skal være imellem ${Utilities.getValue(threshold.minimumValue)} og ${Utilities.getValue(threshold.maximumValue)}`;
     },
     'CustomFunctionValidationRule': (newValue, threshold) => {
       return `ikke en gyldig værdi`;
@@ -35,37 +35,37 @@ export let data = {
       return `ikke gyldig e-mailadresse`;
     },
     'EqualityValidationRule': (newValue, threshold) => {
-      return `burde være ${ Utilities.getValue(threshold.otherValue) }`;
+      return `burde være ${Utilities.getValue(threshold.otherValue)}`;
     },
     'InEqualityValidationRule': (newValue, threshold) => {
-      return `kan ikke være ${ Utilities.getValue(threshold.otherValue) }`;
+      return `kan ikke være ${Utilities.getValue(threshold.otherValue)}`;
     },
     'EqualityWithOtherLabelValidationRule': (newValue, threshold) => {
-      return `er ikke ens ${ Utilities.getValue(threshold.otherValueLabel) }`;
+      return `er ikke ens ${Utilities.getValue(threshold.otherValueLabel)}`;
     },
     'InEqualityWithOtherLabelValidationRule': (newValue, threshold) => {
-      return `kan ikke være ens ${ Utilities.getValue(threshold.otherValueLabel) }`;
+      return `kan ikke være ens ${Utilities.getValue(threshold.otherValueLabel)}`;
     },
     'InCollectionValidationRule': (newValue, threshold) => {
       return `ikke en gyldig værdi`;
     },
     'MinimumInclusiveValueValidationRule': (newValue, threshold) => {
-      return `skal være ${ Utilities.getValue(threshold) } eller højere`;
+      return `skal være ${Utilities.getValue(threshold)} eller højere`;
     },
     'MinimumLengthValidationRule': (newValue, threshold) => {
-      return `skal være mindst ${ Utilities.getValue(threshold) } tegn lang`;
+      return `skal være mindst ${Utilities.getValue(threshold)} tegn lang`;
     },
     'MinimumValueValidationRule': (newValue, threshold) => {
-      return `skal være større end ${ Utilities.getValue(threshold) }`;
+      return `skal være større end ${Utilities.getValue(threshold)}`;
     },
     'MaximumInclusiveValueValidationRule': (newValue, threshold) => {
-      return `skal være ${ Utilities.getValue(threshold) } eller mindre`;
+      return `skal være ${Utilities.getValue(threshold)} eller mindre`;
     },
     'MaximumLengthValidationRule': (newValue, threshold) => {
-      return `kan ikke være længere end ${ Utilities.getValue(threshold) } tegn`;
+      return `kan ikke være længere end ${Utilities.getValue(threshold)} tegn`;
     },
     'MaximumValueValidationRule': (newValue, threshold) => {
-      return `skal være mindre end ${ Utilities.getValue(threshold) }`;
+      return `skal være mindre end ${Utilities.getValue(threshold)}`;
     },
     'NumericValidationRule': (newValue, threshold) => {
       return `skal være en talværdi`;
@@ -83,7 +83,7 @@ export let data = {
       return `skal være en kombination af små bogstaver, store bogstaver, tal og specialtegn`;
     },
     'MediumPasswordValidationRule': (newValue, threshold) => {
-      return `skal indeholde mindst ${ Utilities.getValue(threshold) } af de følgende grupper: små bogstaver, store bogstaver, tal og specialtegn`;
+      return `skal indeholde mindst ${Utilities.getValue(threshold)} af de følgende grupper: små bogstaver, store bogstaver, tal og specialtegn`;
     },
     'URLValidationRule': (newValue, threshold) => {
       return `ikke en gyldig URL`;

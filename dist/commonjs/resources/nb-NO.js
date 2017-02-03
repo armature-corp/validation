@@ -27,10 +27,10 @@ var data = exports.data = {
       return 'kan kun inneholde bokstaver og mellomrom';
     },
     'BetweenLengthValidationRule': function BetweenLengthValidationRule(newValue, threshold) {
-      return 'skal være mellom ' + _utilities.Utilities.getValue(threshold.minimumLength) + ' og ' + _utilities.Utilities.getValue(threshold.maximumLength) + ' tegn langt';
+      return 'skal v\xE6re mellom ' + _utilities.Utilities.getValue(threshold.minimumLength) + ' og ' + _utilities.Utilities.getValue(threshold.maximumLength) + ' tegn langt';
     },
     'BetweenValueValidationRule': function BetweenValueValidationRule(newValue, threshold) {
-      return 'skal være mellom ' + _utilities.Utilities.getValue(threshold.minimumValue) + ' og ' + _utilities.Utilities.getValue(threshold.maximumValue);
+      return 'skal v\xE6re mellom ' + _utilities.Utilities.getValue(threshold.minimumValue) + ' og ' + _utilities.Utilities.getValue(threshold.maximumValue);
     },
     'CustomFunctionValidationRule': function CustomFunctionValidationRule(newValue, threshold) {
       return 'ikke en gyldig verdi';
@@ -42,40 +42,40 @@ var data = exports.data = {
       return 'ikke en gyldig e-postadresse';
     },
     'EqualityValidationRule': function EqualityValidationRule(newValue, threshold) {
-      return 'burde være ' + _utilities.Utilities.getValue(threshold.otherValue);
+      return 'burde v\xE6re ' + _utilities.Utilities.getValue(threshold.otherValue);
     },
     'InEqualityValidationRule': function InEqualityValidationRule(newValue, threshold) {
-      return 'kan ikke være ' + _utilities.Utilities.getValue(threshold.otherValue);
+      return 'kan ikke v\xE6re ' + _utilities.Utilities.getValue(threshold.otherValue);
     },
     'EqualityWithOtherLabelValidationRule': function EqualityWithOtherLabelValidationRule(newValue, threshold) {
       return 'er ikke like ' + _utilities.Utilities.getValue(threshold.otherValueLabel);
     },
     'InEqualityWithOtherLabelValidationRule': function InEqualityWithOtherLabelValidationRule(newValue, threshold) {
-      return 'kan ikke være like ' + _utilities.Utilities.getValue(threshold.otherValueLabel);
+      return 'kan ikke v\xE6re like ' + _utilities.Utilities.getValue(threshold.otherValueLabel);
     },
     'InCollectionValidationRule': function InCollectionValidationRule(newValue, threshold) {
       return 'ikke en gyldig verdi';
     },
     'MinimumInclusiveValueValidationRule': function MinimumInclusiveValueValidationRule(newValue, threshold) {
-      return 'skal være ' + _utilities.Utilities.getValue(threshold) + ' eller høyere';
+      return 'skal v\xE6re ' + _utilities.Utilities.getValue(threshold) + ' eller h\xF8yere';
     },
     'MinimumLengthValidationRule': function MinimumLengthValidationRule(newValue, threshold) {
-      return 'skal være minst ' + _utilities.Utilities.getValue(threshold) + ' tegn langt';
+      return 'skal v\xE6re minst ' + _utilities.Utilities.getValue(threshold) + ' tegn langt';
     },
     'MinimumValueValidationRule': function MinimumValueValidationRule(newValue, threshold) {
-      return 'skal være større enn ' + _utilities.Utilities.getValue(threshold);
+      return 'skal v\xE6re st\xF8rre enn ' + _utilities.Utilities.getValue(threshold);
     },
     'MaximumInclusiveValueValidationRule': function MaximumInclusiveValueValidationRule(newValue, threshold) {
-      return 'skal være ' + _utilities.Utilities.getValue(threshold) + ' eller mindre';
+      return 'skal v\xE6re ' + _utilities.Utilities.getValue(threshold) + ' eller mindre';
     },
     'MaximumLengthValidationRule': function MaximumLengthValidationRule(newValue, threshold) {
-      return 'kan ikke være lengre enn ' + _utilities.Utilities.getValue(threshold) + ' tegn';
+      return 'kan ikke v\xE6re lengre enn ' + _utilities.Utilities.getValue(threshold) + ' tegn';
     },
     'MaximumValueValidationRule': function MaximumValueValidationRule(newValue, threshold) {
-      return 'skal være mindre enn ' + _utilities.Utilities.getValue(threshold);
+      return 'skal v\xE6re mindre enn ' + _utilities.Utilities.getValue(threshold);
     },
     'NumericValidationRule': function NumericValidationRule(newValue, threshold) {
-      return 'skal være en tallverdi';
+      return 'skal v\xE6re en tallverdi';
     },
     'NoSpacesValidationRule': function NoSpacesValidationRule(newValue, threshold) {
       return 'kan ikke inneholde mellomrom';
@@ -87,10 +87,10 @@ var data = exports.data = {
       return 'ikke en gyldig verdi';
     },
     'StrongPasswordValidationRule': function StrongPasswordValidationRule(newValue, threshold) {
-      return 'skal være en kombinasjon av små bokstaver, store bokstaver, tall og spesialtegn';
+      return 'skal v\xE6re en kombinasjon av sm\xE5 bokstaver, store bokstaver, tall og spesialtegn';
     },
     'MediumPasswordValidationRule': function MediumPasswordValidationRule(newValue, threshold) {
-      return 'skal inneholde minst ' + _utilities.Utilities.getValue(threshold) + ' av følgende grupper: små bokstaver, store bokstaver, tall og spesialtegn';
+      return 'skal inneholde minst ' + _utilities.Utilities.getValue(threshold) + ' av f\xF8lgende grupper: sm\xE5 bokstaver, store bokstaver, tall og spesialtegn';
     },
     'URLValidationRule': function URLValidationRule(newValue, threshold) {
       return 'ikke en gyldig URL';

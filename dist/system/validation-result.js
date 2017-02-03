@@ -1,6 +1,8 @@
 'use strict';
 
 System.register([], function (_export, _context) {
+  "use strict";
+
   var ValidationResult, ValidationResultProperty;
 
   function _classCallCheck(instance, Constructor) {

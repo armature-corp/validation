@@ -21,6 +21,8 @@ var Validation = exports.Validation = (_dec = (0, _aureliaDependencyInjection.in
   function Validation(observerLocator, validationConfig) {
     _classCallCheck(this, Validation);
 
+    console.warn('[ARMATURE][DEPRECATION WARNING] Update Validation');
+
     this.observerLocator = observerLocator;
     this.config = validationConfig ? validationConfig : Validation.defaults;
   }

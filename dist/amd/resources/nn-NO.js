@@ -55,13 +55,13 @@ define(['exports', '../utilities'], function (exports, _utilities) {
         return 'ikkje ein gyldig verdi';
       },
       'MinimumInclusiveValueValidationRule': function MinimumInclusiveValueValidationRule(newValue, threshold) {
-        return 'skal vere ' + _utilities.Utilities.getValue(threshold) + ' eller høgare';
+        return 'skal vere ' + _utilities.Utilities.getValue(threshold) + ' eller h\xF8gare';
       },
       'MinimumLengthValidationRule': function MinimumLengthValidationRule(newValue, threshold) {
         return 'skal vere minst ' + _utilities.Utilities.getValue(threshold) + ' teikn langt';
       },
       'MinimumValueValidationRule': function MinimumValueValidationRule(newValue, threshold) {
-        return 'skal vere større enn ' + _utilities.Utilities.getValue(threshold);
+        return 'skal vere st\xF8rre enn ' + _utilities.Utilities.getValue(threshold);
       },
       'MaximumInclusiveValueValidationRule': function MaximumInclusiveValueValidationRule(newValue, threshold) {
         return 'skal vere ' + _utilities.Utilities.getValue(threshold) + ' eller mindre';
@@ -85,10 +85,10 @@ define(['exports', '../utilities'], function (exports, _utilities) {
         return 'ikkje ein gyldig verdi';
       },
       'StrongPasswordValidationRule': function StrongPasswordValidationRule(newValue, threshold) {
-        return 'skal vere ein kombinasjon av små bokstavar, store bokstavar, tall og spesialteikn';
+        return 'skal vere ein kombinasjon av sm\xE5 bokstavar, store bokstavar, tall og spesialteikn';
       },
       'MediumPasswordValidationRule': function MediumPasswordValidationRule(newValue, threshold) {
-        return 'skal innehalde minst ' + _utilities.Utilities.getValue(threshold) + ' av dei følgjande gruppene: små bokstavar, store bokstavar, tal og spesialteikn';
+        return 'skal innehalde minst ' + _utilities.Utilities.getValue(threshold) + ' av dei f\xF8lgjande gruppene: sm\xE5 bokstavar, store bokstavar, tal og spesialteikn';
       },
       'URLValidationRule': function URLValidationRule(newValue, threshold) {
         return 'ikkje ein gyldig URL';

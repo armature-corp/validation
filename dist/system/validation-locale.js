@@ -1,6 +1,8 @@
 'use strict';
 
 System.register(['aurelia-dependency-injection', 'aurelia-loader'], function (_export, _context) {
+  "use strict";
+
   var Container, Loader, ValidationLocale, ValidationLocaleRepository;
 
   function _classCallCheck(instance, Constructor) {

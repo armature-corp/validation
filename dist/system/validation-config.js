@@ -1,6 +1,8 @@
 'use strict';
 
 System.register(['./validation-locale', './strategies/twbootstrap-view-strategy'], function (_export, _context) {
+  "use strict";
+
   var ValidationLocale, TWBootstrapViewStrategy, ValidationConfigDefaults, ValidationConfig;
 
   function _classCallCheck(instance, Constructor) {

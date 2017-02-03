@@ -1,7 +1,20 @@
 'use strict';
 
 System.register(['./utilities', './validation-config', './validation-locale', './validation-result', './validation-rules', './validation', './validation-group', './validate-custom-attribute', './validation-view-strategy', './strategies/twbootstrap-view-strategy', './decorators'], function (_export, _context) {
+  "use strict";
+
   var ValidationConfig, Validation;
+  function configure(aurelia, configCallback) {
+    aurelia.globalResources('./validate-custom-attribute');
+    if (configCallback !== undefined && typeof configCallback === 'function') {
+      configCallback(Validation.defaults);
+    }
+    aurelia.singleton(ValidationConfig, Validation.defaults);
+    return Validation.defaults.locale();
+  }
+
+  _export('configure', configure);
+
   return {
     setters: [function (_utilities) {
       var _exportObj = {};
@@ -23,7 +36,7 @@ System.register(['./utilities', './validation-config', './validation-locale', '.
       var _exportObj4 = {};
 
       for (var _key in _validationResult) {
-        if (_key !== "default") _exportObj4[_key] = _validationResult[_key];
+        if (_key !== "default" && _key !== "__esModule") _exportObj4[_key] = _validationResult[_key];
       }
 
       _export(_exportObj4);
@@ -31,7 +44,7 @@ System.register(['./utilities', './validation-config', './validation-locale', '.
       var _exportObj5 = {};
 
       for (var _key2 in _validationRules) {
-        if (_key2 !== "default") _exportObj5[_key2] = _validationRules[_key2];
+        if (_key2 !== "default" && _key2 !== "__esModule") _exportObj5[_key2] = _validationRules[_key2];
       }
 
       _export(_exportObj5);
@@ -67,17 +80,6 @@ System.register(['./utilities', './validation-config', './validation-locale', '.
 
       _export(_exportObj11);
     }],
-    execute: function () {
-      function configure(aurelia, configCallback) {
-        aurelia.globalResources('./validate-custom-attribute');
-        if (configCallback !== undefined && typeof configCallback === 'function') {
-          configCallback(Validation.defaults);
-        }
-        aurelia.singleton(ValidationConfig, Validation.defaults);
-        return Validation.defaults.locale();
-      }
-
-      _export('configure', configure);
-    }
+    execute: function () {}
   };
 });

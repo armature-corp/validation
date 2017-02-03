@@ -1,6 +1,8 @@
 'use strict';
 
 System.register(['./validation-rules-collection', './path-observer', './debouncer'], function (_export, _context) {
+  "use strict";
+
   var ValidationRulesCollection, PathObserver, Debouncer, ValidationProperty;
 
   function _classCallCheck(instance, Constructor) {

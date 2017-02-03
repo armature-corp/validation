@@ -7,6 +7,8 @@ import { ValidationConfig } from './validation-config';
 
 export let Validation = (_dec = inject(ObserverLocator), _dec(_class = class Validation {
   constructor(observerLocator, validationConfig) {
+    console.warn('[ARMATURE][DEPRECATION WARNING] Update Validation');
+
     this.observerLocator = observerLocator;
     this.config = validationConfig ? validationConfig : Validation.defaults;
   }

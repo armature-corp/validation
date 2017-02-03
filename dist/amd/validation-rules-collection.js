@@ -138,7 +138,7 @@ define(['exports', './utilities', './validation-locale'], function (exports, _ut
     };
 
     SwitchCaseValidationRulesCollection.prototype.getCurrentCollection = function getCurrentCollection(caseLabel) {
-      var createIfNotExists = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
+      var createIfNotExists = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
       if (caseLabel === this.defaultCaseLabel) {
         return this.defaultCollection;

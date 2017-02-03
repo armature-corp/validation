@@ -1,6 +1,8 @@
 'use strict';
 
 System.register(['./validation-rules-collection', './validation-property', './validation-config', './validation-rules'], function (_export, _context) {
+  "use strict";
+
   var SwitchCaseValidationRulesCollection, ValidationProperty, ValidationConfig, MinimumValueValidationRule, MinimumInclusiveValueValidationRule, BetweenValueValidationRule, InCollectionValidationRule, MaximumValueValidationRule, MaximumInclusiveValueValidationRule, EqualityValidationRule, EqualityWithOtherLabelValidationRule, InEqualityValidationRule, InEqualityWithOtherLabelValidationRule, EmailValidationRule, URLValidationRule, MinimumLengthValidationRule, MaximumLengthValidationRule, BetweenLengthValidationRule, NumericValidationRule, NoSpacesValidationRule, DigitValidationRule, AlphaValidationRule, AlphaOrWhitespaceValidationRule, AlphaNumericValidationRule, AlphaNumericOrWhitespaceValidationRule, StrongPasswordValidationRule, MediumPasswordValidationRule, ContainsOnlyValidationRule, RegexValidationRule, CustomFunctionValidationRule, ValidationGroupBuilder;
 
   function _classCallCheck(instance, Constructor) {

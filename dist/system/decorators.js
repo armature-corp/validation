@@ -1,6 +1,8 @@
 'use strict';
 
 System.register(['aurelia-metadata'], function (_export, _context) {
+  "use strict";
+
   var metadata, _class, _temp, ValidationMetadata, ValidationPropertyMetadata;
 
   function _classCallCheck(instance, Constructor) {
@@ -8,6 +10,17 @@ System.register(['aurelia-metadata'], function (_export, _context) {
       throw new TypeError("Cannot call a class as a function");
     }
   }
+
+  function ensure(setupStep) {
+    console.warn('The ensure decorator has been deprecated and will be removed in the next release.');
+    return function (target, propertyName) {
+      var validationMetadata = metadata.getOrCreateOwn(ValidationMetadata.metadataKey, ValidationMetadata, target);
+      var property = validationMetadata.getOrCreateProperty(propertyName);
+      property.addSetupStep(setupStep);
+    };
+  }
+
+  _export('ensure', ensure);
 
   return {
     setters: [function (_aureliaMetadata) {
@@ -64,17 +77,6 @@ System.register(['aurelia-metadata'], function (_export, _context) {
 
         return ValidationPropertyMetadata;
       }();
-
-      function ensure(setupStep) {
-        console.warn('The ensure decorator has been deprecated and will be removed in the next release.');
-        return function (target, propertyName) {
-          var validationMetadata = metadata.getOrCreateOwn(ValidationMetadata.metadataKey, ValidationMetadata, target);
-          var property = validationMetadata.getOrCreateProperty(propertyName);
-          property.addSetupStep(setupStep);
-        };
-      }
-
-      _export('ensure', ensure);
     }
   };
 });

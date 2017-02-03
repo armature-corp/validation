@@ -35,7 +35,7 @@ Object.defineProperty(exports, 'ValidationLocale', {
 var _validationResult = require('./validation-result');
 
 Object.keys(_validationResult).forEach(function (key) {
-  if (key === "default") return;
+  if (key === "default" || key === "__esModule") return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function get() {
@@ -47,7 +47,7 @@ Object.keys(_validationResult).forEach(function (key) {
 var _validationRules = require('./validation-rules');
 
 Object.keys(_validationRules).forEach(function (key) {
-  if (key === "default") return;
+  if (key === "default" || key === "__esModule") return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function get() {

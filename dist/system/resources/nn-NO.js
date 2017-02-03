@@ -1,6 +1,8 @@
 'use strict';
 
 System.register(['../utilities'], function (_export, _context) {
+  "use strict";
+
   var Utilities, data;
   return {
     setters: [function (_utilities) {
@@ -57,13 +59,13 @@ System.register(['../utilities'], function (_export, _context) {
             return 'ikkje ein gyldig verdi';
           },
           'MinimumInclusiveValueValidationRule': function MinimumInclusiveValueValidationRule(newValue, threshold) {
-            return 'skal vere ' + Utilities.getValue(threshold) + ' eller høgare';
+            return 'skal vere ' + Utilities.getValue(threshold) + ' eller h\xF8gare';
           },
           'MinimumLengthValidationRule': function MinimumLengthValidationRule(newValue, threshold) {
             return 'skal vere minst ' + Utilities.getValue(threshold) + ' teikn langt';
           },
           'MinimumValueValidationRule': function MinimumValueValidationRule(newValue, threshold) {
-            return 'skal vere større enn ' + Utilities.getValue(threshold);
+            return 'skal vere st\xF8rre enn ' + Utilities.getValue(threshold);
           },
           'MaximumInclusiveValueValidationRule': function MaximumInclusiveValueValidationRule(newValue, threshold) {
             return 'skal vere ' + Utilities.getValue(threshold) + ' eller mindre';
@@ -87,10 +89,10 @@ System.register(['../utilities'], function (_export, _context) {
             return 'ikkje ein gyldig verdi';
           },
           'StrongPasswordValidationRule': function StrongPasswordValidationRule(newValue, threshold) {
-            return 'skal vere ein kombinasjon av små bokstavar, store bokstavar, tall og spesialteikn';
+            return 'skal vere ein kombinasjon av sm\xE5 bokstavar, store bokstavar, tall og spesialteikn';
           },
           'MediumPasswordValidationRule': function MediumPasswordValidationRule(newValue, threshold) {
-            return 'skal innehalde minst ' + Utilities.getValue(threshold) + ' av dei følgjande gruppene: små bokstavar, store bokstavar, tal og spesialteikn';
+            return 'skal innehalde minst ' + Utilities.getValue(threshold) + ' av dei f\xF8lgjande gruppene: sm\xE5 bokstavar, store bokstavar, tal og spesialteikn';
           },
           'URLValidationRule': function URLValidationRule(newValue, threshold) {
             return 'ikkje ein gyldig URL';

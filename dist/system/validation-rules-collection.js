@@ -1,6 +1,8 @@
 'use strict';
 
 System.register(['./utilities', './validation-locale'], function (_export, _context) {
+  "use strict";
+
   var Utilities, ValidationLocale, ValidationRulesCollection, SwitchCaseValidationRulesCollection;
 
   function _classCallCheck(instance, Constructor) {
@@ -144,7 +146,7 @@ System.register(['./utilities', './validation-locale'], function (_export, _cont
         };
 
         SwitchCaseValidationRulesCollection.prototype.getCurrentCollection = function getCurrentCollection(caseLabel) {
-          var createIfNotExists = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
+          var createIfNotExists = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
           if (caseLabel === this.defaultCaseLabel) {
             return this.defaultCollection;

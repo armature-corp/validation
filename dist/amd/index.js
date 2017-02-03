@@ -24,7 +24,7 @@ define(['exports', './utilities', './validation-config', './validation-locale', 
     }
   });
   Object.keys(_validationResult).forEach(function (key) {
-    if (key === "default") return;
+    if (key === "default" || key === "__esModule") return;
     Object.defineProperty(exports, key, {
       enumerable: true,
       get: function () {
@@ -33,7 +33,7 @@ define(['exports', './utilities', './validation-config', './validation-locale', 
     });
   });
   Object.keys(_validationRules).forEach(function (key) {
-    if (key === "default") return;
+    if (key === "default" || key === "__esModule") return;
     Object.defineProperty(exports, key, {
       enumerable: true,
       get: function () {

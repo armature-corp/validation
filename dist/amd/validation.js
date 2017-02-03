@@ -18,6 +18,8 @@ define(['exports', 'aurelia-binding', './validation-group', 'aurelia-dependency-
     function Validation(observerLocator, validationConfig) {
       _classCallCheck(this, Validation);
 
+      console.warn('[ARMATURE][DEPRECATION WARNING] Update Validation');
+
       this.observerLocator = observerLocator;
       this.config = validationConfig ? validationConfig : Validation.defaults;
     }

@@ -1,6 +1,8 @@
 'use strict';
 
 System.register(['../validation-view-strategy'], function (_export, _context) {
+  "use strict";
+
   var ValidationViewStrategy, TWBootstrapViewStrategyBase, TWBootstrapViewStrategy;
 
   function _classCallCheck(instance, Constructor) {

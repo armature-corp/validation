@@ -20,10 +20,10 @@ export let data = {
       return `can contain only letters or spaces`;
     },
     'BetweenLengthValidationRule': (newValue, threshold) => {
-      return `needs to be between ${ Utilities.getValue(threshold.minimumLength) } and ${ Utilities.getValue(threshold.maximumLength) } characters long`;
+      return `needs to be between ${Utilities.getValue(threshold.minimumLength)} and ${Utilities.getValue(threshold.maximumLength)} characters long`;
     },
     'BetweenValueValidationRule': (newValue, threshold) => {
-      return `needs to be between ${ Utilities.getValue(threshold.minimumValue) } and ${ Utilities.getValue(threshold.maximumValue) }`;
+      return `needs to be between ${Utilities.getValue(threshold.minimumValue)} and ${Utilities.getValue(threshold.maximumValue)}`;
     },
     'CustomFunctionValidationRule': (newValue, threshold) => {
       return `not a valid value`;
@@ -35,37 +35,37 @@ export let data = {
       return `is not a valid email address`;
     },
     'EqualityValidationRule': (newValue, threshold) => {
-      return `should be ${ Utilities.getValue(threshold.otherValue) }`;
+      return `should be ${Utilities.getValue(threshold.otherValue)}`;
     },
     'InEqualityValidationRule': (newValue, threshold) => {
-      return `cannot be ${ Utilities.getValue(threshold.otherValue) }`;
+      return `cannot be ${Utilities.getValue(threshold.otherValue)}`;
     },
     'EqualityWithOtherLabelValidationRule': (newValue, threshold) => {
-      return `does not match ${ Utilities.getValue(threshold.otherValueLabel) }`;
+      return `does not match ${Utilities.getValue(threshold.otherValueLabel)}`;
     },
     'InEqualityWithOtherLabelValidationRule': (newValue, threshold) => {
-      return `cannot match ${ Utilities.getValue(threshold.otherValueLabel) }`;
+      return `cannot match ${Utilities.getValue(threshold.otherValueLabel)}`;
     },
     'InCollectionValidationRule': (newValue, threshold) => {
       return `not a valid value`;
     },
     'MinimumInclusiveValueValidationRule': (newValue, threshold) => {
-      return `needs to be ${ Utilities.getValue(threshold) } or more`;
+      return `needs to be ${Utilities.getValue(threshold)} or more`;
     },
     'MinimumLengthValidationRule': (newValue, threshold) => {
-      return `needs to be at least ${ Utilities.getValue(threshold) } characters long`;
+      return `needs to be at least ${Utilities.getValue(threshold)} characters long`;
     },
     'MinimumValueValidationRule': (newValue, threshold) => {
-      return `needs to be more than ${ Utilities.getValue(threshold) }`;
+      return `needs to be more than ${Utilities.getValue(threshold)}`;
     },
     'MaximumInclusiveValueValidationRule': (newValue, threshold) => {
-      return `needs to be ${ Utilities.getValue(threshold) } or less`;
+      return `needs to be ${Utilities.getValue(threshold)} or less`;
     },
     'MaximumLengthValidationRule': (newValue, threshold) => {
-      return `cannot be longer than ${ Utilities.getValue(threshold) } characters`;
+      return `cannot be longer than ${Utilities.getValue(threshold)} characters`;
     },
     'MaximumValueValidationRule': (newValue, threshold) => {
-      return `needs to be less than ${ Utilities.getValue(threshold) }`;
+      return `needs to be less than ${Utilities.getValue(threshold)}`;
     },
     'NumericValidationRule': (newValue, threshold) => {
       return `needs to be a number`;
@@ -83,7 +83,7 @@ export let data = {
       return `should contain a combination of lowercase letters, uppercase letters, digits and special characters`;
     },
     'MediumPasswordValidationRule': (newValue, threshold) => {
-      return `should contain at least ${ Utilities.getValue(threshold) } of the following groups: lowercase letters, uppercase letters, digits or special characters`;
+      return `should contain at least ${Utilities.getValue(threshold)} of the following groups: lowercase letters, uppercase letters, digits or special characters`;
     },
     'URLValidationRule': (newValue, threshold) => {
       return `is not a valid URL`;

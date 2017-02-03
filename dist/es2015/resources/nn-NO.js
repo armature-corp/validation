@@ -20,10 +20,10 @@ export let data = {
       return `kan berre innehalde bokstavar og mellomrom`;
     },
     'BetweenLengthValidationRule': (newValue, threshold) => {
-      return `skal vere mellom ${ Utilities.getValue(threshold.minimumLength) } og ${ Utilities.getValue(threshold.maximumLength) } teikn langt`;
+      return `skal vere mellom ${Utilities.getValue(threshold.minimumLength)} og ${Utilities.getValue(threshold.maximumLength)} teikn langt`;
     },
     'BetweenValueValidationRule': (newValue, threshold) => {
-      return `skal vere mellom ${ Utilities.getValue(threshold.minimumValue) } og ${ Utilities.getValue(threshold.maximumValue) }`;
+      return `skal vere mellom ${Utilities.getValue(threshold.minimumValue)} og ${Utilities.getValue(threshold.maximumValue)}`;
     },
     'CustomFunctionValidationRule': (newValue, threshold) => {
       return `ikkje ein gyldig verdi`;
@@ -35,37 +35,37 @@ export let data = {
       return `ikkje ei gyldig e-postadresse`;
     },
     'EqualityValidationRule': (newValue, threshold) => {
-      return `burde vere ${ Utilities.getValue(threshold.otherValue) }`;
+      return `burde vere ${Utilities.getValue(threshold.otherValue)}`;
     },
     'InEqualityValidationRule': (newValue, threshold) => {
-      return `kan ikkje vere ${ Utilities.getValue(threshold.otherValue) }`;
+      return `kan ikkje vere ${Utilities.getValue(threshold.otherValue)}`;
     },
     'EqualityWithOtherLabelValidationRule': (newValue, threshold) => {
-      return `er ikkje like ${ Utilities.getValue(threshold.otherValueLabel) }`;
+      return `er ikkje like ${Utilities.getValue(threshold.otherValueLabel)}`;
     },
     'InEqualityWithOtherLabelValidationRule': (newValue, threshold) => {
-      return `kan ikkje vere like ${ Utilities.getValue(threshold.otherValueLabel) }`;
+      return `kan ikkje vere like ${Utilities.getValue(threshold.otherValueLabel)}`;
     },
     'InCollectionValidationRule': (newValue, threshold) => {
       return `ikkje ein gyldig verdi`;
     },
     'MinimumInclusiveValueValidationRule': (newValue, threshold) => {
-      return `skal vere ${ Utilities.getValue(threshold) } eller høgare`;
+      return `skal vere ${Utilities.getValue(threshold)} eller høgare`;
     },
     'MinimumLengthValidationRule': (newValue, threshold) => {
-      return `skal vere minst ${ Utilities.getValue(threshold) } teikn langt`;
+      return `skal vere minst ${Utilities.getValue(threshold)} teikn langt`;
     },
     'MinimumValueValidationRule': (newValue, threshold) => {
-      return `skal vere større enn ${ Utilities.getValue(threshold) }`;
+      return `skal vere større enn ${Utilities.getValue(threshold)}`;
     },
     'MaximumInclusiveValueValidationRule': (newValue, threshold) => {
-      return `skal vere ${ Utilities.getValue(threshold) } eller mindre`;
+      return `skal vere ${Utilities.getValue(threshold)} eller mindre`;
     },
     'MaximumLengthValidationRule': (newValue, threshold) => {
-      return `kan ikkje vere lengre enn ${ Utilities.getValue(threshold) } teikn`;
+      return `kan ikkje vere lengre enn ${Utilities.getValue(threshold)} teikn`;
     },
     'MaximumValueValidationRule': (newValue, threshold) => {
-      return `skal vere mindre enn ${ Utilities.getValue(threshold) }`;
+      return `skal vere mindre enn ${Utilities.getValue(threshold)}`;
     },
     'NumericValidationRule': (newValue, threshold) => {
       return `skal vere ein talverdi`;
@@ -83,7 +83,7 @@ export let data = {
       return `skal vere ein kombinasjon av små bokstavar, store bokstavar, tall og spesialteikn`;
     },
     'MediumPasswordValidationRule': (newValue, threshold) => {
-      return `skal innehalde minst ${ Utilities.getValue(threshold) } av dei følgjande gruppene: små bokstavar, store bokstavar, tal og spesialteikn`;
+      return `skal innehalde minst ${Utilities.getValue(threshold)} av dei følgjande gruppene: små bokstavar, store bokstavar, tal og spesialteikn`;
     },
     'URLValidationRule': (newValue, threshold) => {
       return `ikkje ein gyldig URL`;

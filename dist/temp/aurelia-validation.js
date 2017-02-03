@@ -766,8 +766,8 @@ var ValidationGroup = exports.ValidationGroup = function () {
   ValidationGroup.prototype.validate = function validate() {
     var _this9 = this;
 
-    var forceDirty = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
-    var forceExecution = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
+    var forceDirty = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+    var forceExecution = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
 
     this.isValidating = true;
     var promise = Promise.resolve(true);
@@ -1392,7 +1392,7 @@ var SwitchCaseValidationRulesCollection = exports.SwitchCaseValidationRulesColle
   };
 
   SwitchCaseValidationRulesCollection.prototype.getCurrentCollection = function getCurrentCollection(caseLabel) {
-    var createIfNotExists = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
+    var createIfNotExists = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
     if (caseLabel === this.defaultCaseLabel) {
       return this.defaultCollection;
@@ -2165,6 +2165,8 @@ var ValidationViewStrategy = exports.ValidationViewStrategy = function () {
 var Validation = exports.Validation = (_dec3 = (0, _aureliaDependencyInjection.inject)(_aureliaBinding.ObserverLocator), _dec3(_class3 = function () {
   function Validation(observerLocator, validationConfig) {
     _classCallCheck(this, Validation);
+
+    console.warn('[ARMATURE][DEPRECATION WARNING] Update Validation');
 
     this.observerLocator = observerLocator;
     this.config = validationConfig ? validationConfig : Validation.defaults;
