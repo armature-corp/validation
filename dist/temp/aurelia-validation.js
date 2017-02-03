@@ -2166,13 +2166,12 @@ var Validation = exports.Validation = (_dec3 = (0, _aureliaDependencyInjection.i
   function Validation(observerLocator, validationConfig) {
     _classCallCheck(this, Validation);
 
-    console.warn('[ARMATURE][DEPRECATION WARNING] Update Validation');
-
     this.observerLocator = observerLocator;
     this.config = validationConfig ? validationConfig : Validation.defaults;
   }
 
   Validation.prototype.on = function on(subject, configCallback) {
+    console.warn('[ARMATURE][DEPRECATION WARNING] Validation initialized with old validation logic');
     var conf = new ValidationConfig(this.config);
     if (configCallback !== null && configCallback !== undefined && typeof configCallback === 'function') {
       configCallback(conf);

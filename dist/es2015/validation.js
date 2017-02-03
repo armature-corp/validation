@@ -7,13 +7,12 @@ import { ValidationConfig } from './validation-config';
 
 export let Validation = (_dec = inject(ObserverLocator), _dec(_class = class Validation {
   constructor(observerLocator, validationConfig) {
-    console.warn('[ARMATURE][DEPRECATION WARNING] Update Validation');
-
     this.observerLocator = observerLocator;
     this.config = validationConfig ? validationConfig : Validation.defaults;
   }
 
   on(subject, configCallback) {
+    console.warn('[ARMATURE][DEPRECATION WARNING] Validation initialized with old validation logic');
     let conf = new ValidationConfig(this.config);
     if (configCallback !== null && configCallback !== undefined && typeof configCallback === 'function') {
       configCallback(conf);

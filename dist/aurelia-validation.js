@@ -2159,8 +2159,6 @@ export class Validation {
    * @param validationConfig the configuration
    */
   constructor(observerLocator, validationConfig: ValidationConfig) {
-    console.warn('[ARMATURE][DEPRECATION WARNING] Update Validation');
-
     this.observerLocator = observerLocator;
     this.config = validationConfig ? validationConfig : Validation.defaults;
   }
@@ -2171,6 +2169,7 @@ export class Validation {
    * @returns {ValidationGroup} A ValidationGroup that encapsulates the validation rules and current validation state for this subject
    */
   on(subject: any, configCallback? : (conf: ValidationConfig) => void): ValidationGroup {
+    console.warn('[ARMATURE][DEPRECATION WARNING] Validation initialized with old validation logic');
     let conf = new ValidationConfig(this.config);
     if (configCallback !== null && configCallback !== undefined && typeof(configCallback) === 'function') {
       configCallback(conf);
