@@ -210,16 +210,12 @@ var ValidationGroupBuilder = exports.ValidationGroupBuilder = function () {
   };
 
   ValidationGroupBuilder.prototype.switch = function _switch(conditionExpression) {
-    var _this = this;
-
     var condition = conditionExpression;
     if (condition === undefined) {
-      (function () {
-        var observer = _this.validationGroup.validationProperties[_this.validationGroup.validationProperties.length - 1].observer;
-        condition = function condition() {
-          return observer.getValue();
-        };
-      })();
+      var observer = this.validationGroup.validationProperties[this.validationGroup.validationProperties.length - 1].observer;
+      condition = function condition() {
+        return observer.getValue();
+      };
     }
     var conditionalCollection = new _validationRulesCollection.SwitchCaseValidationRulesCollection(condition);
     this.validationRuleCollections[0].addValidationRuleCollection(conditionalCollection);

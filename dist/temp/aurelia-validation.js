@@ -640,16 +640,12 @@ var ValidationGroupBuilder = exports.ValidationGroupBuilder = function () {
   };
 
   ValidationGroupBuilder.prototype.switch = function _switch(conditionExpression) {
-    var _this6 = this;
-
     var condition = conditionExpression;
     if (condition === undefined) {
-      (function () {
-        var observer = _this6.validationGroup.validationProperties[_this6.validationGroup.validationProperties.length - 1].observer;
-        condition = function condition() {
-          return observer.getValue();
-        };
-      })();
+      var observer = this.validationGroup.validationProperties[this.validationGroup.validationProperties.length - 1].observer;
+      condition = function condition() {
+        return observer.getValue();
+      };
     }
     var conditionalCollection = new SwitchCaseValidationRulesCollection(condition);
     this.validationRuleCollections[0].addValidationRuleCollection(conditionalCollection);
@@ -687,7 +683,7 @@ var ValidationGroupBuilder = exports.ValidationGroupBuilder = function () {
 
 var ValidationGroup = exports.ValidationGroup = function () {
   function ValidationGroup(subject, observerLocator, config) {
-    var _this7 = this;
+    var _this6 = this;
 
     _classCallCheck(this, ValidationGroup);
 
@@ -701,7 +697,7 @@ var ValidationGroup = exports.ValidationGroup = function () {
     this.onPropertyValidationCallbacks = [];
     this.isValidating = false;
     this.onDestroy = config.onLocaleChanged(function () {
-      _this7.validate(false, true);
+      _this6.validate(false, true);
     });
     validationMetadata = _aureliaMetadata.metadata.getOwn(ValidationMetadata.metadataKey, Object.getPrototypeOf(this.subject));
     if (validationMetadata) {
@@ -724,13 +720,13 @@ var ValidationGroup = exports.ValidationGroup = function () {
   };
 
   ValidationGroup.prototype.onBreezeEntity = function onBreezeEntity() {
-    var _this8 = this;
+    var _this7 = this;
 
     var breezeEntity = this.subject;
     var me = this;
     var errors = void 0;
     this.onPropertyValidate(function (propertyBindingPath) {
-      _this8.passes(function () {
+      _this7.passes(function () {
         breezeEntity.entityAspect.validateProperty(propertyBindingPath);
         errors = breezeEntity.entityAspect.getValidationErrors(propertyBindingPath);
         if (errors.length === 0) {
@@ -764,7 +760,7 @@ var ValidationGroup = exports.ValidationGroup = function () {
   };
 
   ValidationGroup.prototype.validate = function validate() {
-    var _this9 = this;
+    var _this8 = this;
 
     var forceDirty = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
     var forceExecution = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
@@ -773,7 +769,7 @@ var ValidationGroup = exports.ValidationGroup = function () {
     var promise = Promise.resolve(true);
 
     var _loop2 = function _loop2(i) {
-      var validatorProperty = _this9.validationProperties[i];
+      var validatorProperty = _this8.validationProperties[i];
       promise = promise.then(function () {
         return validatorProperty.validateCurrentValue(forceDirty, forceExecution);
       });
@@ -788,17 +784,17 @@ var ValidationGroup = exports.ValidationGroup = function () {
     });
     this.onValidateCallbacks.forEach(function (onValidateCallback) {
       promise = promise.then(function () {
-        return _this9.config.locale();
+        return _this8.config.locale();
       }).then(function (locale) {
         return Promise.resolve(onValidateCallback.validationFunction()).then(function (callbackResult) {
           for (var prop in callbackResult) {
             var resultProp = void 0;
             var result = void 0;
             var newPropResult = void 0;
-            if (!_this9.result.properties[prop]) {
-              _this9.ensure(prop);
+            if (!_this8.result.properties[prop]) {
+              _this8.ensure(prop);
             }
-            resultProp = _this9.result.addProperty(prop);
+            resultProp = _this8.result.addProperty(prop);
             result = callbackResult[prop];
             newPropResult = {
               latestValue: resultProp.latestValue
@@ -823,9 +819,9 @@ var ValidationGroup = exports.ValidationGroup = function () {
               }
             }
           }
-          _this9.result.checkValidity();
+          _this8.result.checkValidity();
         }, function (a, b, c, d, e) {
-          _this9.result.isValid = false;
+          _this8.result.isValid = false;
           if (onValidateCallback.validationFunctionFailedCallback) {
             onValidateCallback.validationFunctionFailedCallback(a, b, c, d, e);
           }
@@ -833,11 +829,11 @@ var ValidationGroup = exports.ValidationGroup = function () {
       });
     });
     promise = promise.then(function () {
-      _this9.isValidating = false;
-      if (_this9.result.isValid) {
-        return Promise.resolve(_this9.result);
+      _this8.isValidating = false;
+      if (_this8.result.isValid) {
+        return Promise.resolve(_this8.result);
       }
-      return Promise.reject(_this9.result);
+      return Promise.reject(_this8.result);
     });
     return promise;
   };
@@ -1070,19 +1066,19 @@ var ValidationLocaleRepository = function () {
   }
 
   ValidationLocaleRepository.prototype.load = function load(localeIdentifier, basePath) {
-    var _this10 = this;
+    var _this9 = this;
 
     if (!basePath) {
       basePath = 'aurelia-validation/resources/';
     }
     return new Promise(function (resolve, reject) {
-      if (_this10.instances.has(localeIdentifier)) {
-        var locale = _this10.instances.get(localeIdentifier);
+      if (_this9.instances.has(localeIdentifier)) {
+        var locale = _this9.instances.get(localeIdentifier);
         resolve(locale);
       } else {
         var loader = _aureliaDependencyInjection.Container.instance.get(_aureliaLoader.Loader);
         loader.loadModule(basePath + localeIdentifier).then(function (resource) {
-          var locale = _this10.addLocale(localeIdentifier, resource.data);
+          var locale = _this9.addLocale(localeIdentifier, resource.data);
           resolve(locale);
         });
       }
@@ -1105,7 +1101,7 @@ ValidationLocale.Repository = new ValidationLocaleRepository();
 
 var ValidationProperty = exports.ValidationProperty = function () {
   function ValidationProperty(observerLocator, propertyName, validationGroup, propertyResult, config) {
-    var _this11 = this;
+    var _this10 = this;
 
     _classCallCheck(this, ValidationProperty);
 
@@ -1118,10 +1114,10 @@ var ValidationProperty = exports.ValidationProperty = function () {
     this.observer = new PathObserver(observerLocator, validationGroup.subject, propertyName).getObserver();
     this.debouncer = new Debouncer(config.getDebounceTimeout());
     this.subscription = this.observer.subscribe(function () {
-      _this11.debouncer.debounce(function () {
-        var newValue = _this11.observer.getValue();
-        if (newValue !== _this11.latestValue) {
-          _this11.validate(newValue, true);
+      _this10.debouncer.debounce(function () {
+        var newValue = _this10.observer.getValue();
+        if (newValue !== _this10.latestValue) {
+          _this10.validate(newValue, true);
         }
       });
     });
@@ -1130,8 +1126,8 @@ var ValidationProperty = exports.ValidationProperty = function () {
     for (var i = 0; i < dependencies.length; i++) {
       var dependencyObserver = new PathObserver(observerLocator, validationGroup.subject, dependencies[i]).getObserver();
       dependencyObserver.subscribe(function () {
-        _this11.debouncer.debounce(function () {
-          _this11.validateCurrentValue(true);
+        _this10.debouncer.debounce(function () {
+          _this10.validateCurrentValue(true);
         });
       });
       this.dependencyObservers.push(dependencyObserver);
@@ -1162,14 +1158,14 @@ var ValidationProperty = exports.ValidationProperty = function () {
   };
 
   ValidationProperty.prototype.validate = function validate(newValue, shouldBeDirty, forceExecution) {
-    var _this12 = this;
+    var _this11 = this;
 
     if (!this.propertyResult.isDirty && shouldBeDirty || this.latestValue !== newValue || forceExecution) {
       this.latestValue = newValue;
       return this.config.locale().then(function (locale) {
-        return _this12.collectionOfValidationRules.validate(newValue, locale).then(function (validationResponse) {
-          if (_this12.latestValue === validationResponse.latestValue) {
-            _this12.propertyResult.setValidity(validationResponse, shouldBeDirty);
+        return _this11.collectionOfValidationRules.validate(newValue, locale).then(function (validationResponse) {
+          if (_this11.latestValue === validationResponse.latestValue) {
+            _this11.propertyResult.setValidity(validationResponse, shouldBeDirty);
           }
           return validationResponse.isValid;
         }).catch(function (err) {
@@ -1506,7 +1502,7 @@ var ValidationRule = exports.ValidationRule = function () {
   };
 
   ValidationRule.prototype.validate = function validate(currentValue, locale) {
-    var _this13 = this;
+    var _this12 = this;
 
     if (locale === undefined) {
       locale = ValidationLocale.Repository.default;
@@ -1516,12 +1512,12 @@ var ValidationRule = exports.ValidationRule = function () {
     var promise = Promise.resolve(result);
 
     var nextPromise = promise.then(function (promiseResult) {
-      return _this13.setResult(promiseResult, currentValue, locale);
+      return _this12.setResult(promiseResult, currentValue, locale);
     }, function (promiseFailure) {
       if (typeof promiseFailure === 'string' && promiseFailure !== '') {
-        return _this13.setResult(promiseFailure, currentValue, locale);
+        return _this12.setResult(promiseFailure, currentValue, locale);
       }
-      return _this13.setResult(false, currentValue, locale);
+      return _this12.setResult(false, currentValue, locale);
     });
     return nextPromise;
   };
@@ -2196,12 +2192,12 @@ var TWBootstrapViewStrategyBase = exports.TWBootstrapViewStrategyBase = function
   function TWBootstrapViewStrategyBase(appendMessageToInput, appendMessageToLabel, helpBlockClass) {
     _classCallCheck(this, TWBootstrapViewStrategyBase);
 
-    var _this42 = _possibleConstructorReturn(this, _ValidationViewStrate.call(this));
+    var _this41 = _possibleConstructorReturn(this, _ValidationViewStrate.call(this));
 
-    _this42.appendMessageToInput = appendMessageToInput;
-    _this42.appendMessageToLabel = appendMessageToLabel;
-    _this42.helpBlockClass = helpBlockClass;
-    return _this42;
+    _this41.appendMessageToInput = appendMessageToInput;
+    _this41.appendMessageToLabel = appendMessageToLabel;
+    _this41.helpBlockClass = helpBlockClass;
+    return _this41;
   }
 
   TWBootstrapViewStrategyBase.prototype.searchFormGroup = function searchFormGroup(currentElement, currentDepth) {
